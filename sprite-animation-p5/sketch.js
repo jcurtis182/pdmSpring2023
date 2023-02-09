@@ -15,10 +15,10 @@ let x=1;
 let y=1;
 
 function preload() {
-  spritesGuy = loadImage("/assets/SpelunkyGuy.png");
-  spritesGirl = loadImage("/assets/SpelunkyGirl.png");
-  spritesMonk = loadImage("/assets/SpelunkyMonk.png");
-  spritesNinja = loadImage("/assets/SpelunkyNinja.png");
+  spritesGuy = loadImage("assets/SpelunkyGuy.png");
+  spritesGirl = loadImage("assets/SpelunkyGirl.png");
+  spritesMonk = loadImage("assets/SpelunkyMonk.png");
+  spritesNinja = loadImage("assets/SpelunkyNinja.png");
 }
 
 function setup() {
