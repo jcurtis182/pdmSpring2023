@@ -1,9 +1,11 @@
-var noBonk, bonk, synth, reverb, chorus, autowah;
+var noBonk, bonk, synth, reverb, chorus, autowah, bgm;
 var textInfo = "Click the mouse button to disavow unbecoming behavior.";
 
 function preload(){
 	noBonk = loadImage('assets/noBonk.jpg')
   bonk = loadImage('assets/bonk.jpg');
+  // bgm = new Tone.Buffer("assets/npc_music.mp3");
+ // bgm.loop = true;
 }
 
 function setup(){
@@ -38,6 +40,18 @@ function setup(){
   }).toDestination();
 
   synth.connect(reverb).connect(chorus).connect(autowah);
+  
+  bgm = new Tone.Player({
+	  url: "assets/npc_music.mp3",
+	  loop: true,
+	  autostart: true,
+	  onload: function() {
+	    console.log("bgm loaded");
+	  },
+	  onerror: function() {
+	    console.log("bgm error");
+	  }
+	}).toDestination();
 }
 
 function draw(){
