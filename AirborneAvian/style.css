@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+  
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+.connect-btn {
+    background-image: url(assets/connect.png);
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 2px;
+    right: 2px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+    display: none;
+    color: transparent;
+  }
+  
+
+.background {
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-color: skyblue;
+    background-size: 100% 100%;
+    background-position: 0 0 , 50% 0;
+    background-repeat: no-repeat;
+    background-image: url(assets/sky.gif);
+    filter: brightness(120%);
+}
+
+.logo {
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    opacity: 100;
+    height: auto;
+    width: fit-content;
+    max-height: 40%;
+    max-width: fit-content;
+    z-index: 90;
+    background-image: url(assets/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    animation: hover 2s ease-in-out infinite;
+  }
+  @keyframes hover {
+    0% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-10px);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+  }
+
+.UI_container {
+    position: fixed;
+    top: 0px;
+    left: auto;
+    opacity: 100;
+    background-color: skyblue;
+    z-index: 90;
+}
+
+.UI_title {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    width: fit-content;
+    font-size: 8vh;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.arduino_msg {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    width: fit-content;
+    font-size: 5vh;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(148, 136, 255);
+    background: linear-gradient(to right, red, orange, yellow, green, blue, purple, 
+                                          red, orange, yellow, green, blue, purple, 
+                                          red, orange, yellow, green, blue, purple, 
+                                          red, orange, yellow, green, blue, purple);
+                                          /* brute forcing a seamless gradiant   */
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: moveGradient 10s linear infinite;
+    display: none;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 100% center;
+    }
+}
+
+
+
+.grass {
+    background-color: #e6d29d;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+.grass_top {
+    height: 10px;
+    z-index: 4;
+    background-color: rgb(71, 209, 71);
+}
+
+/* .cloud1, .cloud2, .cloud3, .cloud4 {
+    background-image: url(assets/cloud.png);
+    top: 20px;
+    position: fixed;
+}
+  
+.cloud1 {
+    left: 10%;
+}
+
+.cloud2 {
+    left: 30%;
+}
+
+.cloud3 {
+    left: 50%;
+}
+
+.cloud4 {
+    left: 70%;
+}
+
+@keyframes scud {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} */
+  
+  
+.bird {
+  height: 100px;
+  width: 160px;
+  position: fixed;
+  top: 40vh;
+  left: 30vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+  
+.pipe_sprite {
+    position: fixed;
+    top: 40vh;
+    left: 100vw;
+    height: 70vh;
+    width: 6vw;
+    background-color: green;
+    z-index: 2;
+}
+
+.message {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 8vh;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    top: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+  
+.score {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 8vh;
+    font-weight: normal;
+    color: darkorange;
+    top: 0;
+    left: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+  
+.score_val {
+    position: sticky;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    animation: none;  
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+  
+@keyframes glowGold {
+    0% {
+        text-shadow: 0px 0px 0px gold;
+    }
+    50% {
+        text-shadow: 0px 0px 15px gold;
+    }
+    100% {
+        text-shadow: 0px 0px 0px gold;
+    }
+}
+
+.score_final_val {
+    position: sticky;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    animation: none; 
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+
+.score_final {
+    position: fixed;
+    width: fit-content;
+    z-index: 10;
+    height: 10vh;
+    font-size: 12vh;
+    font-weight: normal;
+    color: darkorange;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+/* TO DO: 5/8/23 1PM
+- animate clouds across screen
+- wire arduino
+- copy over reading/writing code from targetSmashArduino
+- change serial writing to read button, write to LEDs
+- write arduino code (should be very similar to tSA)
+- profit? 
+*/
