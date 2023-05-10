@@ -88,7 +88,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    top: 55%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -113,7 +113,7 @@ body {
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
-    top: 65%;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -145,39 +145,7 @@ body {
     height: 10px;
     z-index: 4;
     background-color: rgb(71, 209, 71);
-}
-
-/* .cloud1, .cloud2, .cloud3, .cloud4 {
-    background-image: url(assets/cloud.png);
-    top: 20px;
-    position: fixed;
-}
-  
-.cloud1 {
-    left: 10%;
-}
-
-.cloud2 {
-    left: 30%;
-}
-
-.cloud3 {
-    left: 50%;
-}
-
-.cloud4 {
-    left: 70%;
-}
-
-@keyframes scud {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-} */
-  
+} 
   
 .bird {
   height: 100px;
@@ -196,7 +164,7 @@ body {
     left: 100vw;
     height: 70vh;
     width: 6vw;
-    background-color: green;
+    background: linear-gradient(to right, rgb(0, 114, 0), rgb(0, 170, 0), rgb(0, 208, 0), rgb(0, 208, 0), rgb(0, 170, 0), rgb(0, 114, 0));
     z-index: 2;
 }
 
@@ -272,14 +240,3 @@ body {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-
-
-/* TO DO: 5/8/23 1PM
-- animate clouds across screen
-- wire arduino
-- copy over reading/writing code from targetSmashArduino
-- change serial writing to read button, write to LEDs
-- write arduino code (should be very similar to tSA)
-- profit? 
-*/
