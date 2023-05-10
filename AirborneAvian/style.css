@@ -46,7 +46,7 @@ body {
     left: 50%;
     opacity: 100;
     height: auto;
-    width: fit-content;
+    width: auto;
     max-height: 40%;
     max-width: fit-content;
     z-index: 90;

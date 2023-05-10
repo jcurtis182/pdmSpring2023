@@ -12,8 +12,8 @@ let buttonState = 0, buttonPressed = false;
 let isGreen = false;
 
 let move_speed = 3;
-// let gravity = 0.2;
-let gravity = 0.4;
+let gravity = 0.2;
+// let gravity = 0.4;   //better for slower pc
 let pipe_space = 250;
 let prev_score = 0;
 let score = 0;
@@ -214,7 +214,6 @@ function play() {
       pipe_sprite.className = "pipe_sprite";
       pipe_sprite.style.top = pipe_posi + pipe_gap + "vh";
       pipe_sprite.style.left = "100vw";
-      // pipe_sprite.style.background = "linear-gradient(to right, rgb(0, 208, 0), rgb(0, 170, 0), rgb(0, 114, 0), rgb(0, 170, 0), rgb(0, 208, 0))"
       pipe_sprite.increase_score = "1";
       document.body.appendChild(pipe_sprite);
       
